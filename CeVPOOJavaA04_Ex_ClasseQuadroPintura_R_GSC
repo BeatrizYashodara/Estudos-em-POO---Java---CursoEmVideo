@@ -1,0 +1,87 @@
+package aula04poo2;
+
+public class QuadroPintura {
+    private String titulo;
+    private String autor;
+    public String estilo;
+    protected int ano;
+    private boolean em_exibicao;
+    protected int sala;
+    public boolean limpo;
+    private boolean guardado;
+
+    public QuadroPintura(String titulo, String autor, String estilo, int ano, boolean em_exibicao, int sala, boolean limpo, boolean guardado) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.estilo = estilo;
+        this.ano = ano;
+        this.em_exibicao = em_exibicao;
+        this.sala = sala;
+        this.limpo = limpo;
+        this.guardado = guardado;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public String getEstilo() {
+        return estilo;
+    }
+
+    public void setEstilo(String estilo) {
+        this.estilo = estilo;
+    }
+
+    public int getAno() {
+        return ano;
+    }
+
+    public void setAno(int ano) {
+        this.ano = ano;
+    }
+
+    public boolean isEm_exibicao() {
+        return em_exibicao;
+    }
+
+    public void setEm_exibicao(boolean em_exibicao) {
+        this.em_exibicao = em_exibicao;
+    }
+
+    public int getSala() {
+        return sala;
+    }
+
+    public void setSala(int sala) {
+        this.sala = sala;
+    }
+
+    public boolean isLimpo() {
+        return limpo;
+    }
+
+    public void setLimpo(boolean limpo) {
+        this.limpo = limpo;
+    }
+
+    public boolean isGuardado() {
+        return guardado;
+    }
+
+    public void setGuardado(boolean guardado) {
+        this.guardado = guardado;
+    }
+}
