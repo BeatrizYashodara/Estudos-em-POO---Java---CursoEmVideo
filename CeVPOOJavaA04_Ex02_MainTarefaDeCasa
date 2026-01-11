@@ -1,0 +1,43 @@
+
+public class Aula05POO {
+    
+    public static void main(String[] args) {
+
+    }
+    TarefaDeCasa tdc01 = new TarefaDeCasa ();
+        
+        tdc01.tipo_tarefa = "Varrer o chao";
+        tdc01.nome_autor = "Beatriz";
+        tdc01.onde = "Casa toda";
+        tdc01.material = "Vassoura";
+        tdc01.tenho_material = false;
+        tdc01.quando = "hoje";
+        tdc01.feita = false;
+        
+        tdc01.status();
+        
+        System.out.println("dia de varrer o chao. Se bem que eu nao to mt a fim. Vou delegar \n");
+        
+        tdc01.delegar_tarefa("Paty");
+        tdc01.status();
+        
+        System.out.println("Hmm...Ela nao ta achando a vassoura. Disse que vai deixar para amanha \n");
+        tdc01.postergar_tarefa("amanha");
+        tdc01.status();
+        
+        System.out.println("o amanha chegou ... \n");
+        tdc01.quando = "hoje";
+        tdc01.status();
+        
+        System.out.println("Ela me pediu para pegar a vassoura \n");
+        tdc01.pegar_material();
+        
+        System.out.println("A paty combinou que ela vai passar o pano no chao e eu vou varrer. \n");
+        tdc01.delegar_tarefa("beatriz");
+        tdc01.status();
+        
+        System.out.println("Ta... Vamos acabar logo com isso \n");
+        tdc01.executar();
+        tdc01.status();
+
+}
