@@ -1,0 +1,37 @@
+public class Aula04POO {
+    
+    public static void main(String[] args) {
+     QuadroPintura q1 = new QuadroPintura();
+        q1.titulo = "Coracao de Jesus";
+        q1.estilo = "Classico";
+        q1.em_exibicao = true;
+        q1.sala = 02;
+        q1.limpo = true;
+        q1. guardado = false;
+        
+        System.out.println("Olha, um quadro! Que quadro é esse?");
+        q1.status();
+        
+        System.out.println("Vai ficar seguro dentro da estante!");
+        q1.guardarNaEstante();
+        System.out.println(" ");
+        
+        System.out.println("Agora ele esta guardado na estante");
+        q1.status();
+        System.out.println(" ");
+        
+        System.out.println("Já esta ha muito tempo na estante, vamos tirar!");
+        q1.tirarDaEstante();
+        
+        System.out.println("Vamos colocar na sala 03!");
+        q1.colocarNaSala(03);
+        q1.status();
+        
+        System.out.println(" ");
+        System.out.println("O quadro esta meio sujo... Vamos limpar!");
+        q1.limpar();
+        q1.status();
+
+    }
+    
+}
