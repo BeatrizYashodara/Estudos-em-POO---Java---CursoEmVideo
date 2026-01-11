@@ -1,0 +1,84 @@
+/*
+1 - Abstrair duas classes a partir de dois objetos, um sendo real e o outro sendo conceitual
+
+Classe real: Quadro 
+Atributos: 
+Título
+Autor/a 
+Estilo
+Ano
+Métodos:
+Virar o quadro para uma direção específica
+Colocar na parede de um cômodo
+Limpar 
+Guardar 
+
+2 - Comando: 
+Codificar a classe real do exercicio 1.
+
+*/
+
+// CLASSE QUADROPINTURA:
+package com.mycompany.aula02poo;
+
+public class QuadroPintura {
+    
+    /*
+    Classe real: Quadro 
+    Atributos: 
+    Título
+    Autor/a 
+    Estilo
+    Ano
+    Em_exibicao
+    Angulaçao
+    Sala
+
+    Métodos:
+    Virar o quadro para uma direção específica
+    Colocar na parede de um cômodo
+    Limpar 
+    Guardar 
+
+    */
+    
+    String titulo;
+    String autor;
+    String estilo;
+    int ano;
+    boolean em_exibicao;
+    int sala;
+    boolean limpo;
+    boolean guardado;
+    
+    void status() {
+        System.out.println("Quadro " + this.titulo + ". Autor(a): " + this.autor);
+        System.out.println("Estilo: " + this.estilo + ". Ano: " + this.ano);
+        System.out.println("Esta limpo? " + this.limpo + ".");
+        System.out.println("Esta guardado? " + this.guardado);
+        System.out.println("Esta em exibicao? " + this.em_exibicao + ". Em qual sala? " + this.sala);
+    }
+
+    int colocarNaSala(int s) {
+        this.sala = s;
+        return s;
+    }
+    
+    void limpar() {
+        this.limpo = true;
+    }
+    
+    void guardarNaEstante() {
+        this.em_exibicao = false;
+        this.guardado = true;
+        this.limpo = false;
+        this.sala = 0;
+    }
+    
+    void tirarDaEstante() {
+        this.em_exibicao = true;
+        this.guardado = false;
+        this.sala = 01;
+    }
+    
+}
