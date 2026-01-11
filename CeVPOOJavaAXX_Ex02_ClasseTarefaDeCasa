@@ -1,0 +1,98 @@
+/*
+1 - Abstrair duas classes a partir de dois objetos, um sendo real e o outro sendo conceitual
+1b - objeto conceitual
+
+Classe abstrata: Tarefa de casa 
+
+Atributos
+Tipo de tarefa
+Quem vai fazer
+Quando será feita 
+Materiais de execução
+Onde será feita
+
+Métodos
+Executar a tarefa
+Postergar a tarefa para mais tarde 
+Delegar a tarefa para outra pessoa 
+Cancelar a tarefa 
+
+2 - Comando: 
+Codificar a classe real do exercicio 1.
+
+*/
+
+package com.mycompany.aula02poo;
+
+public class TarefaDeCasa {
+    /*
+    Classe abstrata: Tarefa de casa 
+
+    Atributos
+    Tipo de tarefa
+    Quem vai fazer
+    Quando será feita 
+    Material de execução
+    Onde será feita
+
+    Métodos
+    Executar a tarefa
+    Postergar a tarefa para mais tarde 
+    Delegar a tarefa para outra pessoa 
+    Cancelar a tarefa 
+
+    */
+    
+    String tipo_tarefa;
+    String nome_autor;
+    String quando;
+    String material;
+    String onde;
+    boolean feita;
+    boolean tenho_material;
+    
+    void status() {
+        System.out.println("Qual eh o tipo da tarefa? " + this.tipo_tarefa + ". E quem fara? " + this.nome_autor);
+        System.out.println("Quando sera feita? " + this.quando + ". Que material sera necessario? " + this.material);
+        System.out.println("Onde sera feita? " + this.onde + ".");
+        System.out.println("Tarefa feita?" + this.feita);
+    }
+    
+    void executar() {
+        if ( this.tenho_material == true) {
+            System.out.println("Tarefa feita!");
+            this.feita = true;
+        } else {
+            System.out.println("Erro: Nao posso fazer a tarefa, nao tenho material!");
+            this.feita = false;
+        }
+    }
+    String postergar_tarefa(String dia) {
+            this.quando = dia;
+            return dia;
+    }
+    
+    String delegar_tarefa(String nome) {
+        this.nome_autor = nome;
+        return nome;
+    }
+    
+    void cancelar_tarefa() {
+        this.tipo_tarefa = "cancelada";
+        this.nome_autor = "ninguem";
+        this.quando = "nunca";
+        this.material = "nenhum";
+        this.onde = "lugar algum";
+        this.feita = false;
+        this.tenho_material = true;
+    }
+    
+    void pegar_material(){
+        this.tenho_material = true;
+    }
+    
+    void guardar_material(){
+        this.tenho_material = false;
+    }
+    
+}
